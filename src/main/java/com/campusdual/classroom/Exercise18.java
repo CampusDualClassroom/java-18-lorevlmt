@@ -1,27 +1,24 @@
 package com.campusdual.classroom;
 
+import com.campusdual.util.Utils;
+
 import java.util.Scanner;
 
 public class Exercise18 {
 
 	public static void main(String[] args) {
-		Scanner scanner = new Scanner(System.in);
 
-		System.out.println("Introducir el tamaño del array con un número entero:");
+		int size = Utils.integer("Introducir el tamaño del array con un número entero:");
 
-		int entero = scanner.nextInt();
-
-		scanner.close();
-
-		int[] array = createAndInitializeArray(entero);
+		int[] array = createAndInitializeArray(size);
 
 		showInlineArray(array);
 	}
 
-	public static int[] createAndInitializeArray(int entero) {
+	public static int[] createAndInitializeArray(int size) {
 
-		int[] array = new int[entero];
-		for (int i = 0; i < entero; i++) {
+		int[] array = new int[size];
+		for (int i = 0; i < size; i++) {
 			array[i] = i + 1;
 		}
 		return array;
